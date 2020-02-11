@@ -65,7 +65,6 @@ function updateSongList() {
             titleDiv = $("<div>").text("Title: " + response.result[i].track);
             artistDiv = $("<div>").text("Artist: " + response.result[i].artist);
             lyrics = response.result[i].api_lyrics + "?&apikey=05580c9wJXOa2YrFZUJlxtMDKREEexMldmTAHlmwb7Uk62acRmtbkJIv";
-            console.log(lyrics)
             buttonDIV.val(lyrics);
             $(buttonDIV).append(titleDiv);
             $(buttonDIV).append(artistDiv);
@@ -80,7 +79,7 @@ function updateSongList() {
             });
         }
     })
-    
+
         var queryTabs = "https://www.songsterr.com/a/ra/songs.json?pattern=" + replaceSpace;
 
         $.ajax({
@@ -95,13 +94,12 @@ function updateSongList() {
                     var tabButtons = $("<div>").attr("class", "songsterButtons");
                     var titleDiv = $("<li>").text("Title: " + response[i].title);
                     var artistDiv = $("<li>").text("Artist: " + response[i].artist.name);
+                    var lyricsLi = $("<li>");
                     var queryURL = "https://www.songsterr.com/a/wa/song?id=" + response[i].id;
-                    // $(queryURL).attr("target", "_blank");
-                    var str = "Click me for tab info!";
-                    var result = str.link(queryURL); 
-                    $(tabButtons).append(titleDiv);
-                    $(tabButtons).append(artistDiv);
-                    $(tabButtons).append(result);
+                    var aTag = $("<a>").attr("href", queryURL);
+                    $(aTag).text("Click me for tab info.").attr("target", "_blank")
+                    $(lyricsLi).append(aTag);
+                    $(tabButtons).append(titleDiv, artistDiv, lyricsLi);
                     $("#tabList").append(tabButtons);
                 }
             })
