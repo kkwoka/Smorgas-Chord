@@ -116,7 +116,7 @@ function lyricsClick() {
             $(".showLyricsDiv").text("");
             var showLyrics = response.result.lyrics;
             var replaceLyrics = showLyrics.replace(/\n/g, '<br>'); 
-            $(".showLyricsDiv").innerHTML(replaceLyrics);
+            $(".showLyricsDiv").append(replaceLyrics);
         } 
     })
 }
