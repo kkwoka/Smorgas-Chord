@@ -1,13 +1,10 @@
 var songArr = [];
-var songName;
 var buttonDIV;
 var titleDiv;
 var artistDiv;
 var lyrics; 
-var queryLyricsARR= [];
 var queryLYR;
 var replaceSpace;
-var showLyrics1;
 
 $(document).on("click", ".happiButtons", lyricsClick);
 $(document).on("click", "#yeezy", kanyeTalks);
@@ -39,6 +36,7 @@ function currentSongSearch() {
     $("#searchedList").append(ul);
     updateSongList(currentSong);
 } 
+
 function currentSongListnone() {
     currentSong = $(this).text()
     updateSongList(currentSong);
