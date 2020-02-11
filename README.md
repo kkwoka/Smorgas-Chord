@@ -21,7 +21,7 @@ https://kkwoka.github.io/Smorgas-Chord/
 * Happi.dev
 * Songsterr
 * Kanye.rest
+* Tippy.js
 
 ## Images
-
 ![Image of Smorgas-chord](./images/Readme-Screenshot.png)

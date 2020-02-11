@@ -39,6 +39,7 @@ function currentSongSearch() {
     $("#searchedList").append(ul);
     updateSongList(currentSong);
 } 
+
 function currentSongListnone() {
     currentSong = $(this).text()
     updateSongList(currentSong);
@@ -64,6 +65,7 @@ function updateSongList() {
             titleDiv = $("<div>").text("Title: " + response.result[i].track);
             artistDiv = $("<div>").text("Artist: " + response.result[i].artist);
             lyrics = response.result[i].api_lyrics + "?&apikey=05580c9wJXOa2YrFZUJlxtMDKREEexMldmTAHlmwb7Uk62acRmtbkJIv";
+            console.log(lyrics)
             buttonDIV.val(lyrics);
             $(buttonDIV).append(titleDiv);
             $(buttonDIV).append(artistDiv);
@@ -78,7 +80,7 @@ function updateSongList() {
             });
         }
     })
-
+    
         var queryTabs = "https://www.songsterr.com/a/ra/songs.json?pattern=" + replaceSpace;
 
         $.ajax({
@@ -115,8 +117,8 @@ function lyricsClick() {
         if (response.success === true) {
             $(".showLyricsDiv").text("");
             var showLyrics = response.result.lyrics;
-            console.log(showLyrics) // shows lyrics how I want them to appear, but won't append that same way
-            $(".showLyricsDiv").append(showLyrics);
+            var replaceLyrics = showLyrics.replace(/\n/g, '<br>'); 
+            $(".showLyricsDiv").innerHTML(replaceLyrics);
         } 
     })
 }

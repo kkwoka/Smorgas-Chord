@@ -6,9 +6,7 @@ body {
     display: flex;
     flex-direction: column;
     background-image: linear-gradient(to right, #b63b37, #524ab6) 
-
 }
-
 
 #image {
     max-width: 200px;
@@ -27,17 +25,17 @@ body {
     padding: 20px;
     color: slategrey;
 }
+
 #search {
     margin: 20px;
 }
+
 .first {
     width: 100%;
     height: 650px;
     /* background-color: #b5e9e9;
     background-image: linear-gradient(to bottom right, #3ab3b3, #96b884) */
-
     background-image: linear-gradient(to right, #b63b37, #524ab6) 
-    
 }
 
 .second {
@@ -61,6 +59,7 @@ body {
     padding: 20px;
     margin: 20px;
 }
+
 #tabsField {
     /* background-color: #ffe1d0; */
     background-color: transparent;
@@ -93,8 +92,8 @@ body {
     margin: 20px;
 }
 
-#songList {
-    list-style: none;
+li {
+    list-style-type: none;
 }
 
 #image {
@@ -106,8 +105,8 @@ body {
     padding: 20px;
     color: slategrey;
 }
-#search {
 
+#search {
     margin: 20px;
 }
 
@@ -115,7 +114,6 @@ body {
     width: 100%;
     height: 100%;
     background-color: teal;
-
 }
 
 
@@ -140,7 +138,6 @@ body {
     background-color: rgba(30, 52, 142, 0.5);
 }
 
-
 .songsterButtons {
     color: #3eb9b9;
     border-radius: 5px;
@@ -151,8 +148,8 @@ body {
     margin-bottom: 5px;
     background: rgba(30, 52, 142, 0.5);
     list-style: none;
-
 }
+
 .happiButtons {
     color:#b5e9e9;
     border-radius: 5px;
@@ -164,8 +161,8 @@ body {
     margin-bottom: 5px;
     margin: 1px;
     background: rgba(30, 52, 142, 0.5);
-
 }
+
 #subtitle {
     font-size: 18px;
     font-weight: 700;
@@ -185,5 +182,5 @@ body {
     background-color: beige;
     padding: 5px;
     border-radius: 5px;
-  }
+}
   
