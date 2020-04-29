@@ -26,6 +26,9 @@ if (retrievedData !=null) {
 }
 
 function currentSongSearch() {
+    $('html,body').animate({
+        scrollTop: $(".second").offset().top},
+        'slow');
     currentSong = $("#input").val();
     songArr.push(currentSong);
     localStorage.setItem("songArr", JSON.stringify(songArr));
@@ -91,13 +94,12 @@ function updateSongList() {
                     var tabButtons = $("<div>").attr("class", "songsterButtons");
                     var titleDiv = $("<li>").text("Title: " + response[i].title);
                     var artistDiv = $("<li>").text("Artist: " + response[i].artist.name);
+                    var lyricsLi = $("<li>");
                     var queryURL = "https://www.songsterr.com/a/wa/song?id=" + response[i].id;
-                    // $(queryURL).attr("target", "_blank");
-                    var str = "Click me for tab info!";
-                    var result = str.link(queryURL); 
-                    $(tabButtons).append(titleDiv);
-                    $(tabButtons).append(artistDiv);
-                    $(tabButtons).append(result);
+                    var aTag = $("<a>").attr("href", queryURL);
+                    $(aTag).text("Click me for tab info.").attr("target", "_blank")
+                    $(lyricsLi).append(aTag);
+                    $(tabButtons).append(titleDiv, artistDiv, lyricsLi);
                     $("#tabList").append(tabButtons);
                 }
             })
@@ -113,8 +115,8 @@ function lyricsClick() {
         if (response.success === true) {
             $(".showLyricsDiv").text("");
             var showLyrics = response.result.lyrics;
-            console.log(showLyrics) // shows lyrics how I want them to appear, but won't append that same way
-            $(".showLyricsDiv").append(showLyrics);
+            var replaceLyrics = showLyrics.replace(/\n/g, '<br>'); 
+            $(".showLyricsDiv").append(replaceLyrics);
         } 
     })
 }
