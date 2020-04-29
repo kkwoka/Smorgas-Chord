@@ -1,10 +1,23 @@
 # Smorgas-Chord
-This application will allow the user to search lyrics and guitar tabs for popular songs using two different API. The lyrics will appear on the page while the guitar tabs will open into a Songsterr page. The previously searched songs will appear in the history, and clicking on the history will pull up the previous search. There is also a peripheral API that will call randomized Kanye West quotes. 
+This application will allow the user to search lyrics and guitar tabs for popular songs using two different API. The lyrics will appear on the page while the guitar tabs will open into a separate Songsterr page. The previously searched songs will appear in the history as clickable links, should the user want to look through their search history and pull up song and lyric information from previous searches. There is also a peripheral API that will call randomized Kanye West quotes. 
 
 ## Deployment Link
-https://verypaleale.github.io/Project1/
+https://kkwoka.github.io/Smorgas-Chord/
+​
+## Table of Contents 
+* [User_Story](#User_Story)
+​
+* [Files](#Files)
+​  ​
+* [Resources](#Resources)
 
-## Included Files
+* [Images](#Images)
+​
+## User_Story
+```
+As a beginning guitar player, I want practice popular songs so that become better at guitar and have an easier time learning songs I do not know.
+```
+## Files
 * index.html
 * results.html
 * Assets
