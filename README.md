@@ -3,7 +3,6 @@ This application will allow the user to search lyrics and guitar tabs for popula
 
 ## Deployment Link
 https://kkwoka.github.io/Smorgas-Chord/
-<<<<<<< HEAD
 ​
 ## Table of Contents 
 * [User_Story](#User_Story)
@@ -11,8 +10,6 @@ https://kkwoka.github.io/Smorgas-Chord/
 * [Files](#Files)
 ​  ​
 * [Resources](#Resources)
-=======
->>>>>>> d917cd787e743168b31bf0672d16eb95bdc92e7e
 
 * [Images](#Images)
 ​
